@@ -1,0 +1,11 @@
+version: '2.2'
+services:
+  notebook:
+    image: jupyter/scipy-notebook:latest
+    container_name: notebook
+    environment:
+      - PASSWORD=1234
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - 8888:8888
